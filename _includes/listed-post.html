@@ -1,9 +1,11 @@
 <div class="post">
-  <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
     {{ post.date | date: "%b %d, %Y" }}
   </info>
+  <div class="body"><a href="{{ post.url }}#disqus_thread"><br/></a></div>
   <div class="body">{{ post.content }}</div>
+  <div class="body"><a href="{{ post.url }}#disqus_thread"><br/></a></div>
   <div class="breaker"></div>
   <info class="empty after">
   </info>
