@@ -1,0 +1,5 @@
+name: I blog IT here!
+description: Thoughts on software design, architecture and programming that I just can't hold inside anymore.
+url: http://blog.korbakov.com
+markdown: redcarpet
+pygments: true

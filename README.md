@@ -1,0 +1,1 @@
+This is my personal blog made with Jekyll. I used the [awesome blog of Rasmus Andersson](http://rsms.me/about/) as a basis. Everything that is good about style must be credited to him.
