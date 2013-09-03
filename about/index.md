@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-<img src="/assets/img/me.jpg" width="50%" align="right">
+<img src="/assets/img/me.jpg" width="40%" align="right">
 
 My name is Michael Korbakov. I'm sortware developer and architect with passion about technology, mathematics and formal methods in software development. My current research interest is digging into functional programming paradigm and applying it to everyday software engineering problems. The project that currently keeps me busy is [Nimble CRM](http://nimble.com) -- a platform for social selling with great vision behind it.
 
