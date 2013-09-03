@@ -14,8 +14,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/res/apple-touch-icon-114x114-precomposed.png"-->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@rmihael">
-    <!--meta property="fb:admins" content="728642302">
-    <meta property="fb:app_id" content="38027689216"-->
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}">
       {% if page.description %}
@@ -61,6 +59,10 @@
       {% endif %}
     </div>
     {% endif %}
+    
+    {% unless page.no_comments %}
+    {% include disqus.html %}
+    {% endunless %}
     
     {% unless page.no_footer %}
     <footer>
