@@ -3,7 +3,6 @@ layout: post
 title:  "Monadic DI with Reader: is it that good?"
 description: "This post will start my blog and also a series of thoughts about dependency injection in Scala. I want to explore this topic because I'm still confused about it even after spending multiple days digging into."
 og_image_url: "http://blog.korbakov.com/assets/img/di-solder.jpg"
-date:   2013-09-01 22:18:27
 tags: scala, dependency injection
 ---
 <img src="/assets/img/di-solder.jpg" align="right" width="50%"/>
@@ -34,7 +33,7 @@ From visibility standpoint, any person caring for keeping application complexity
 
 Reader dependency injection in form that's described in aforementioned sources makes it very difficult to answer these questions. In fact it's impossible to understand what are real dependencies of some component without going through it's code looking for all references of configuration passed through Reader. Global configuration accessible from every place developer wants makes [Service Locator anti-pattern][sl-anti-pattern], which is nothing I would like to see in my application.
 
-I had a blitzkrieg plan to build a simple Reader-based solution for DI that would have better visibility into how application components are connected. Pretty soon, I realized that this task is far from the trivial one. I'm not done yet, but merely trying I've got some good insights I'm going to share in my following posts. Stay tuned!
+I had a blitzkrieg plan to build a simple Reader-based solution for DI that would give better visibility into how application components are connected. Pretty soon, I realized that this task is far from the trivial one. I'm not done yet, but merely trying I've got some good insights I'm going to share in my following posts. Stay tuned!
 
 [dead-simple-di]: http://www.youtube.com/watch?v=ZasXwtTRkio
 [di-no-gym-video]: http://vimeo.com/44502327
