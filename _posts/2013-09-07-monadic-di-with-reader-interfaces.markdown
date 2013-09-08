@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Monadic DI with Reader: interfaces"
-description: "This post will start my blog and also a series of thoughts about dependency injection in Scala. I want to explore this topic because I'm still confused about it even after spending multiple days digging into."
+description: "Interfaces are foundation of dependency injection. This post explores how Reader monad and interfaces works together."
 og_image_url: "/assets/img/elephants-turtle-earth.jpg"
 tags: scala, dependency injection
 visible: true
