@@ -8,11 +8,12 @@ layout: default
     <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
       {{ page.date | date: "%b %d, %Y" }}
     </info>
+    <div class="body"><a href="{{ post.url }}#disqus_thread"><br/></a></div>
     <div class="body">{{ content }}</div>
     <div class="breaker"></div>
 
     <info class="after">
-<div class="fb-like" data-href="http://blog.korbakov.com{{ page.url }}" data-send="false" data-width="550" data-show-faces="false" data-font="arial"></div>
+<div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-send="false" data-width="550" data-show-faces="false" data-font="arial"></div>
     </info>
   </div>
 </div>

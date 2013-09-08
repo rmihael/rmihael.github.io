@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}Michael Korbakov</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }} {% endif %}&mdash; Michael Korbakov</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" media="screen, projection" href="/assets/css/screen.css" type="text/css">
@@ -25,13 +25,13 @@
       <meta name="og:description" content="{{ content | strip_html | truncatewords: 25 }}">
       {% endif %}
     {% else %}
-      <meta name="description" content="I blog IT here! by Michael Korbakov">
+      <meta name="description" content="{{ site.description }} by Michael Korbakov">
     {% endif %}
     {% if page.og_image_url %}
-    <meta property="og:image" content="{{ page.og_image_url }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.og_image_url }}">
     {% endif %}
-    <meta property="og:url" content="http://blog.korbakov.com{{ page.url | remove_first:'index.html' }}">
-    <meta property="og:site_name" content="blog.korbakov.com">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | remove_first:'index.html' }}">
+    <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_GB" />
     {% if page.date %}
