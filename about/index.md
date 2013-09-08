@@ -16,7 +16,7 @@ More information [can be found on LinkedIn](http://www.linkedin.com/in/mkorbakov
 
 You can find me on different social networks, my username is usually "rmihael".
 
-- [Twitter](http://twitter.com/rmihael) — if you'll talk to me here I'll hear it
+- [Twitter](http://twitter.com/rmihael) — if you talk to me here I'll hear it
 - [GitHub](https://github.com/rmihael) — when I just need to shut up and show the code
 - [Instagram](http://instagram.com/rmihael/) — sometimes I get lucky with nice shots
 - [Facebook](https://www.facebook.com/michael.korbakov) — friends and foes
