@@ -3,7 +3,7 @@ layout: post
 title:  "Monadic DI with Reader: interfaces"
 description: "Interfaces are foundation of dependency injection. This post explores how Reader monad and interfaces works together."
 og_image_url: "/assets/img/elephants-turtle-earth.jpg"
-tags: scala, dependency injection
+tags: scala, dependency injection, design
 visible: true
 ---
 <img src="{{ page.og_image_url }}" align="right" width="50%"/>

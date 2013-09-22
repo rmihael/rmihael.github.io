@@ -3,7 +3,7 @@ layout: post
 title:  "Monadic DI with Reader: is it that good?"
 description: "This post will start my blog and also a series of thoughts about dependency injection in Scala. I want to explore this topic because I'm still confused about it even after spending multiple days digging into."
 og_image_url: "/assets/img/di-solder.jpg"
-tags: scala, dependency injection
+tags: scala, dependency injection, architecture, design
 visible: true
 ---
 <img src="/assets/img/di-solder.jpg" align="right" width="50%"/>
