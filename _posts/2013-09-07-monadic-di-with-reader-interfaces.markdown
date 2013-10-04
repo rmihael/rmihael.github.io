@@ -51,7 +51,7 @@ trait IFooService {
 }
 {% endhighlight %}
 
-I like the abstract type approach better because it's less intrusive and isolates implementation details better. Type parameters of lower-level interfaces will leak to their clients. Although they carry little of implementation specifics it's still a boilerplate code that no one is happy to see. I can also see ugly [type lambdas](http://stackoverflow.com/questions/8736164/what-are-type-lambdas-in-scala-and-what-are-their-benefits) in some distance at a type parameters direction. Here's an example how things can get ugly for a configuration trait of some service on top of `IFooService` and his twin brother:
+I prefer the abstract type approach because it's less intrusive and isolates implementation details better. Type parameters of lower-level interfaces will leak to their clients. Although they carry little of implementation specifics it's still a boilerplate code that no one is happy to see. I can also see ugly [type lambdas](http://stackoverflow.com/questions/8736164/what-are-type-lambdas-in-scala-and-what-are-their-benefits) in some distance at a type parameters direction. Here's an example how things can get bad for a configuration trait of some service on top of `IFooService` and his twin brother:
 
 {% highlight scala %}
 trait HighLevelServiceConfiguration[FooConf, BarConf] {
@@ -123,6 +123,6 @@ val result: Int = program(configuration)
 
 Surprisingly enough this code will compile and the type of `program` value would be inferred as `Reader[SomeFooService.Conf with SomeBarService.Conf, Int]`. Now it's something to be both happy and worrying about. A happy part comes from the fact that compiler did it's job perfectly by inferring the correct value type. And worries are because that inferring was possible thanks to Reader's [contravariance](http://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)) on first of it's type arguments. It means that we have to use a class inheritance mechanic to build up the configuration that makes the `program` live and breathe. 
 
-The Scala 2.10 compiler will give you a warning about inferring [existential type](http://en.wikipedia.org/wiki/Existential_type#Existential_types) scalaz.Kleisli and propose to add `import scala.language.existentials` to get rid of this warning. I don't currently understand how Scalaz managed to infer this type and don't know if this warning something to worry about. Hopefully I'll have some time soon to grok it.
+The Scala 2.10 compiler will give you a warning about inferring [existential type](http://en.wikipedia.org/wiki/Existential_type#Existential_types) scalaz.Kleisli and propose to add `import scala.language.existentials` to get rid of this warning. Currently I don't understand how Scalaz managed to infer this type and don't know if this warning something to worry about. Hopefully I'll have some time soon to grok it.
 
 In the next post I'll try to workaround some difficulties that comes from the need to use class inheritance to build up the configuration value. One problem that is particularly important is applying different configurations to the same services depending on some context. Constructor-based dependency injection makes it trivial by creating different stateful instances of services. It doesn't seems to be the case for Reader-based injection.
